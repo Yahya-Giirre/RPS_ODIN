@@ -11,4 +11,14 @@ function getComputerChoice(){
         return "scissors"
 }
 
-console.log(getComputerChoice());
+function getPlayerChoice(){
+    let player = prompt("Please enter choice, Rock, Paper or Scissors: ");
+
+    player = player.toLowerCase();
+
+    if (player != null && player == "rock" || player == "paper" || player == "scissors"){
+        return player;
+    }
+    else
+        return null;
+}
