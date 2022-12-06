@@ -22,3 +22,29 @@ function getPlayerChoice(){
     else
         return null;
 }
+
+const computerSelection = getComputerChoice();
+const playerSelection = getPlayerChoice();
+
+function playRound(playerSelection, computerSelection){
+
+    if (playerSelection == "rock" && 
+        computerSelection == "scissors" ||
+        playerSelection == "paper" && 
+        computerSelection == "rock" ||
+        playerSelection == "scissors" && 
+        computerSelection == "paper"){
+            return "You Won";
+        }
+    else if (computerSelection == "rock" && 
+        playerSelection == "scissors" ||
+        computerSelection == "paper" && 
+        playerSelection == "rock" ||
+        computerSelection == "scissors" && 
+        playerSelection == "paper"){
+            return "You Lost";
+        }
+    else (playerSelection == computerSelection)
+        return "Draw";
+}
+
